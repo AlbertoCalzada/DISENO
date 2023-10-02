@@ -1,0 +1,123 @@
+/*Este css es para los moviles*/
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: blue;
+    background-color: lightgray;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 1.6em;
+    word-spacing: 2em;
+    text-align: center;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: darkred;
+    font-size: 18px;
+
+
+}
+
+.years {
+    font-weight: bold;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+
+}
+
+.contenedorPrincipal {
+
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0;
+}
+
+.contenedorUno,
+.contenedorDos,
+.contenedorTres,
+.contenedorCuatro {
+    box-sizing: border-box;
+    padding: 2%;
+    border-bottom: 2px solid blue;
+    width: 100%;
+    padding: 15px;
+    margin: 1%;
+
+}
+
+.enLinea {
+
+    display: inline-block;
+    width: 100%;
+}
+
+.enLinea .years {
+    float: left;
+    margin-right: 40px;
+}
+
+/* Estilos para PC (pantallas más grandes) */
+@media screen and (min-width: 768px) {
+    body {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 36px;
+        letter-spacing: 1.3em;
+        word-spacing: 2em;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .contenedorPrincipal {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .contenedorUno,
+    .contenedorDos,
+    .contenedorTres,
+    .contenedorCuatro {
+        width: 45%;
+        margin: 1%;
+        border-bottom: 0;
+        padding: 15px;
+    }
+
+
+
+    .contenedorCuatro {
+        text-align: center;
+    }
+
+    .enLinea {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .enLinea .years {
+        font-weight: bold;
+        margin-right: 40px;
+
+    }
+
+    .enLineaDerecha {
+
+        margin-left: 40px;
+       
+    }
+
+}
