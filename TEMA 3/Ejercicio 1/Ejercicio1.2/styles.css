@@ -1,0 +1,53 @@
+@media screen and (min-width: 800px) {
+    body {
+        background-color: gainsboro;
+    }
+}
+
+@media screen and (min-width: 480px)and (max-width:799px) {
+    body {
+        background-color:bisque;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    body {
+        background-color: lightgreen;
+    }
+}
+img {
+    width: 200px;
+}
+nav a
+{
+    padding-right: 5%;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+}
+
+.contenedorPrincipal {
+    display: flex;
+    width: 80%;
+    text-align: center;
+    margin: 5% auto;
+    border: 1px solid black;
+   
+    
+}
+
+.contenedorUno {
+    float: left;
+    width: 40%;
+    padding: 2%;
+}
+
+.contenedorDos {
+    float: right;
+    width: 40%;
+    padding: 2%;
+    
+}
