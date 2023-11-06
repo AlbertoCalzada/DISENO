@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video id="myVideo" controls>
+        <source src="video1.mp4" type="video/mp4">
+    </video>
+
+    <div>
+        <button id="playPauseButton">Reproducir</button>
+        <button id="stopButton">Parar</button>
+        <button id="rewindButton">Retroceder 10 segundos</button>
+        <button id="forwardButton">Avanzar 10 segundos</button>
+        <button id="startButton">Inicio</button>
+        <button id="endButton">Fin</button>
+        <input id="volumeControl" type="range" min="0" max="1" step="0.1" value="1">
+        <button id="fullScreenButton">Pantalla Completa</button>
+    </div>
+
+    <div>
+        <progress id="progressBar" max="100"></progress>
+    </div>
+
+    <script>
+        const videoPlayer = document.getElementById('myVideo');
+        const playPauseButton = document.getElementById('playPauseButton');
+        const stopButton = document.getElementById('stopButton');
+        const rewindButton = document.getElementById('rewindButton');
+        const forwardButton = document.getElementById('forwardButton');
+        const startButton = document.getElementById('startButton');
+        const endButton = document.getElementById('endButton');
+        const volumeControl = document.getElementById('volumeControl');
+        const fullScreenButton = document.getElementById('fullScreenButton');
+        const progressBar = document.getElementById('progressBar');
+
+        let isPlaying = false;
+
+      
+        playPauseButton.addEventListener('click', () => {
+            if (isPlaying) {
+                videoPlayer.pause();
+                playPauseButton.textContent = 'Reproducir';
+            } else {
+                videoPlayer.play();
+                playPauseButton.textContent = 'Pausar';
+            }
+            isPlaying = !isPlaying;
+        });
+
+       
+        stopButton.addEventListener('click', () => {
+            videoPlayer.pause();
+            videoPlayer.currentTime = 0;
+            playPauseButton.textContent = 'Reproducir';
+            isPlaying = false;
+        });
+
+        rewindButton.addEventListener('click', () => {
+            videoPlayer.currentTime -= 10;
+        });
+
+       
+        forwardButton.addEventListener('click', () => {
+            videoPlayer.currentTime += 10;
+        });
+
+        
+        startButton.addEventListener('click', () => {
+            videoPlayer.currentTime = 0;
+        });
+
+ 
+        endButton.addEventListener('click', () => {
+            videoPlayer.currentTime = videoPlayer.duration;
+        });
+
+    
+        volumeControl.addEventListener('input', () => {
+            videoPlayer.volume = volumeControl.value;
+        });
+
+   
+        fullScreenButton.addEventListener('click', () => {
+            if (videoPlayer.requestFullscreen) {
+                videoPlayer.requestFullscreen();
+            } else if (videoPlayer.mozRequestFullScreen) {
+                videoPlayer.mozRequestFullScreen();
+            } else if (videoPlayer.webkitRequestFullscreen) {
+                videoPlayer.webkitRequestFullscreen();
+            }
+        });
+
+      
+        videoPlayer.addEventListener('timeupdate', () => {
+            const percent = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+            progressBar.value = percent;
+        });
+    </script>
+</body>
+</html>

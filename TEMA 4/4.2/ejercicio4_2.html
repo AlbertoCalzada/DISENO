@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Reproductor de Vídeo</title>
+</head>
+<body>
+    <h1>Reproductor de Vídeo</h1>
+
+    <video id="videoPlayer" controls>
+        <source src="./video/video1.mp4" type="video/mp4">
+        <source src="./video/video1.mp4" type="video/webm">
+        Tu navegador no soporta la reproducción de vídeo.
+    </video>
+
+    <div>
+        <button onclick="playVideo()">Reproducir</button>
+        <button onclick="pauseVideo()">Pausa</button>
+        <button onclick="stopVideo()">Parar</button>
+        <button onclick="seekVideo(10)">Avanzar 10 segundos</button>
+        <button onclick="seekVideo(-10)">Retroceder 10 segundos</button>
+        <button onclick="seekVideo(0)">Inicio</button>
+        <button onclick="seekVideo('end')">Fin</button>
+    </div>
+
+    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" oninput="setVolume()">
+
+    <button onclick="toggleFullScreen()">Pantalla completa</button>
+
+    <progress id="progressBar" max="100" value="0"></progress>
+
+    <h2>Lista de Reproducción</h2>
+    <ul>
+        <li><a href="./video/video1.mp4" onclick="changeVideo('video1.mp4')">Video 1</a></li>
+        <li><a href="./video/video2.mp4" onclick="changeVideo('video2.mp4')">Video 2</a></li>
+        <li><a href="./video/video3.mp4" onclick="changeVideo('video3.mp4')">Video 3</a></li>
+    </ul>
+
+    <script>
+        const videoPlayer = document.getElementById('videoPlayer');
+        const volumeControl = document.getElementById('volumeControl');
+        const progressBar = document.getElementById('progressBar');
+
+        function playVideo() {
+            videoPlayer.play();
+        }
+
+        function pauseVideo() {
+            videoPlayer.pause();
+        }
+
+        function stopVideo() {
+            videoPlayer.currentTime = 0;
+            videoPlayer.pause();
+        }
+
+        function seekVideo(seconds) {
+            if (seconds === 'end') {
+                videoPlayer.currentTime = videoPlayer.duration;
+            } else {
+                videoPlayer.currentTime += seconds;
+            }
+        }
+
+        function setVolume() {
+            videoPlayer.volume = volumeControl.value;
+        }
+
+        function toggleFullScreen() {
+            if (videoPlayer.requestFullscreen) {
+                videoPlayer.requestFullscreen();
+            } else if (videoPlayer.mozRequestFullScreen) {
+                videoPlayer.mozRequestFullScreen();
+            } else if (videoPlayer.webkitRequestFullscreen) {
+                videoPlayer.webkitRequestFullscreen();
+            }
+        }
+
+        videoPlayer.addEventListener('timeupdate', updateProgressBar);
+
+        function updateProgressBar() {
+            const percent = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+            progressBar.value = percent;
+        }
+
+        function changeVideo(source) {
+            videoPlayer.src = source;
+            videoPlayer.load();
+            videoPlayer.play();
+        }
+    </script>
+</body>
+</html>
