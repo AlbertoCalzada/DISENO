@@ -5,18 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Canva</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            margin: 60px auto;
+        }
+
+        #miCanvas {
+            background-color:blueviolet;
+            border: 1px solid black; /* Agrega un borde para visualizar el canvas */
+        }
+    </style>
+
 </head>
 
 <body>
-    <canvas id="canvas">
+    
+    <canvas id="miCanvas" width="500" height="450"></canvas>
 
-    </canvas>
-    <script>
-        function Pintar() 
-        {
-            var canvasElemento= document.getElementById("canvas");
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
