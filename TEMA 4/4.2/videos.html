@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reproductor de Vídeo</title>
 </head>
 <body>
+    <!-- Reproductor de vídeo con controles -->
     <video id="myVideo" controls>
         <source src="video1.mp4" type="video/mp4">
     </video>
 
+    <!-- Botones y controles -->
     <div>
         <button id="playPauseButton">Reproducir</button>
         <button id="stopButton">Parar</button>
@@ -21,11 +23,14 @@
         <button id="fullScreenButton">Pantalla Completa</button>
     </div>
 
+    <!-- Barra de progreso -->
     <div>
         <progress id="progressBar" max="100"></progress>
     </div>
 
+    <!-- Script JavaScript -->
     <script>
+        // Obtiene referencias a elementos del DOM
         const videoPlayer = document.getElementById('myVideo');
         const playPauseButton = document.getElementById('playPauseButton');
         const stopButton = document.getElementById('stopButton');
@@ -37,9 +42,10 @@
         const fullScreenButton = document.getElementById('fullScreenButton');
         const progressBar = document.getElementById('progressBar');
 
+        // Variable para rastrear el estado de reproducción
         let isPlaying = false;
 
-      
+        // Evento de clic para reproducir o pausar
         playPauseButton.addEventListener('click', () => {
             if (isPlaying) {
                 videoPlayer.pause();
@@ -51,7 +57,7 @@
             isPlaying = !isPlaying;
         });
 
-       
+        // Evento de clic para detener
         stopButton.addEventListener('click', () => {
             videoPlayer.pause();
             videoPlayer.currentTime = 0;
@@ -59,31 +65,32 @@
             isPlaying = false;
         });
 
+        // Evento de clic para retroceder 10 segundos
         rewindButton.addEventListener('click', () => {
             videoPlayer.currentTime -= 10;
         });
 
-       
+        // Evento de clic para avanzar 10 segundos
         forwardButton.addEventListener('click', () => {
             videoPlayer.currentTime += 10;
         });
 
-        
+        // Evento de clic para ir al inicio
         startButton.addEventListener('click', () => {
             videoPlayer.currentTime = 0;
         });
 
- 
+        // Evento de clic para ir al final
         endButton.addEventListener('click', () => {
             videoPlayer.currentTime = videoPlayer.duration;
         });
 
-    
+        // Evento de cambio de volumen
         volumeControl.addEventListener('input', () => {
             videoPlayer.volume = volumeControl.value;
         });
 
-   
+        // Evento de clic para cambiar a pantalla completa
         fullScreenButton.addEventListener('click', () => {
             if (videoPlayer.requestFullscreen) {
                 videoPlayer.requestFullscreen();
@@ -94,7 +101,7 @@
             }
         });
 
-      
+        // Evento de actualización de la barra de progreso
         videoPlayer.addEventListener('timeupdate', () => {
             const percent = (videoPlayer.currentTime / videoPlayer.duration) * 100;
             progressBar.value = percent;

@@ -1,4 +1,5 @@
-/*Este css es para los moviles*/
+/* Estilos específicos para dispositivos móviles */
+/* Este conjunto de reglas CSS se aplica a pantallas con un ancho máximo de 767px */
 
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -15,8 +16,6 @@ h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: darkred;
     font-size: 18px;
-
-
 }
 
 .years {
@@ -27,12 +26,10 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
-
-
 }
 
+/* Estilos para el contenedor principal en dispositivos móviles */
 .contenedorPrincipal {
-
     border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
@@ -40,6 +37,7 @@ body {
     margin: 0;
 }
 
+/* Estilos para contenedores individuales en dispositivos móviles */
 .contenedorUno,
 .contenedorDos,
 .contenedorTres,
@@ -50,11 +48,10 @@ body {
     width: 100%;
     padding: 15px;
     margin: 1%;
-
 }
 
+/* Estilos para elementos en línea en dispositivos móviles */
 .enLinea {
-
     display: inline-block;
     width: 100%;
 }
@@ -64,13 +61,14 @@ body {
     margin-right: 40px;
 }
 
-/* Estilos para PC (pantallas más grandes) */
+/* Estilos para pantallas más grandes (PC) con un ancho mínimo de 768px */
 @media screen and (min-width: 768px) {
     body {
         max-width: 800px;
         margin: 0 auto;
     }
 
+    /* Ajustes de estilos para h1 en pantallas más grandes */
     h1 {
         font-size: 36px;
         letter-spacing: 1.3em;
@@ -79,11 +77,13 @@ body {
         box-sizing: border-box;
     }
 
+    /* Ajustes de estilos para el contenedor principal en pantallas más grandes */
     .contenedorPrincipal {
         max-width: 100%;
         margin: 0 auto;
     }
 
+    /* Ajustes de estilos para contenedores individuales en pantallas más grandes */
     .contenedorUno,
     .contenedorDos,
     .contenedorTres,
@@ -94,12 +94,12 @@ body {
         padding: 15px;
     }
 
-
-
+    /* Ajustes de estilos específicos para el contenedorCuatro en pantallas más grandes */
     .contenedorCuatro {
         text-align: center;
     }
 
+    /* Ajustes de estilos para elementos en línea en pantallas más grandes */
     .enLinea {
         display: flex;
         justify-content: space-between;
@@ -108,16 +108,14 @@ body {
         margin: 0;
     }
 
+    /* Ajustes de estilos para .years en pantallas más grandes */
     .enLinea .years {
         font-weight: bold;
         margin-right: 40px;
-
     }
 
+    /* Ajustes de estilos para .enLineaDerecha en pantallas más grandes */
     .enLineaDerecha {
-
         margin-left: 40px;
-       
     }
-
 }

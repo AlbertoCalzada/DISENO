@@ -1,101 +1,153 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <!-- saved from url=(0058)https://www.arkaitzgarro.com/css3/snippets/cap12/ej06.html -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
-        <title>Ejercicio 6 - Bordes CSS</title>
-        <style type="text/css" media="screen">
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Ejercicio 6 - Bordes CSS</title>
+    <style type="text/css" media="screen">
+        /* Estilos para div con clase exampleborderradius */
         div.exampleborderradius {
+            /* Fondo gris claro */
             background-color: #eee;
+            /* Relleno interno de 20px */
             padding: 20px;
+            /* Márgenes superior y derecho de 10px y 20px respectivamente */
             margin-top: 10px;
             margin-right: 20px;
+            /* Texto centrado dentro del contenedor */
             text-align: center;
         }
 
+        /* Estilos para div con clase exampleborderradiusa */
         div.exampleborderradiusa {
+            /* Fondo gris oscuro */
             background-color: #464646;
-            float:left;
+            /* Flota a la izquierda */
+            float: left;
+            /* Márgenes superior y derecho de 20px y 40px respectivamente */
             margin-top: 20px;
             margin-right: 40px;
+            /* Altura de 65px y ancho de 160px */
             height: 65px;
-            width:160px;
+            width: 160px;
+            /* Texto centrado dentro del contenedor */
             text-align: center;
+            /* Radio de esquina en la parte inferior derecha de 50px */
             border-bottom-right-radius: 50px;
         }
 
+        /* Estilos para div con clase exampleborderradiusb */
         div.exampleborderradiusb {
+            /* Fondo gris oscuro */
             background-color: #464646;
-            float:left;
+            /* Flota a la izquierda */
+            float: left;
+            /* Márgenes superior y derecho de 20px y 40px respectivamente */
             margin-top: 20px;
             margin-right: 40px;
+            /* Altura de 65px y ancho de 160px */
             height: 65px;
-            width:160px;
+            width: 160px;
+            /* Texto centrado dentro del contenedor */
             text-align: center;
+            /* Radio de esquina en la parte inferior derecha de 30px horizontal y 50px vertical */
             border-bottom-right-radius: 30px 50px;
         }
 
+        /* Estilos para div con clase exampleborderradiusc */
         div.exampleborderradiusc {
+            /* Fondo gris oscuro */
             background-color: #464646;
-            float:left;
+            /* Flota a la izquierda */
+            float: left;
+            /* Márgenes superior y derecho de 20px y 40px respectivamente */
             margin-top: 20px;
             margin-right: 40px;
+            /* Altura de 65px y ancho de 160px */
             height: 65px;
-            width:160px;
+            width: 160px;
+            /* Texto centrado dentro del contenedor */
             text-align: center;
+            /* Radio de esquina en la parte inferior derecha de 30px horizontal y 50px vertical (redundante) */
             border-bottom-right-radius: 30px 50px;
         }
 
+        /* Estilos para div con clase exampleborderradiusd */
         div.exampleborderradiusd {
+            /* Fondo gris oscuro */
             background-color: #464646;
-            float:left;
+            /* Flota a la izquierda */
+            float: left;
+            /* Márgenes superior y derecho de 20px y 40px respectivamente */
             margin-top: 20px;
             margin-right: 40px;
+            /* Ancho de 12em y alto de 5em */
             width: 12em;
             height: 5em;
+            /* Texto centrado dentro del contenedor */
             text-align: center;
+            /* Radios de esquina diferentes creando una forma más compleja */
             border-top-left-radius: 50px 20px;
             border-bottom-right-radius: 50px 20px;
             border-top-right-radius: 70px 50px;
             border-bottom-left-radius: 70px 50px;
         }
 
+        /* Estilos para div con clase exampleborderradiuse */
         div.exampleborderradiuse {
+            /* Fondo gris oscuro */
             background-color: #464646;
-            float:left;
+            /* Flota a la izquierda */
+            float: left;
+            /* Márgenes superior y derecho de 20px y 40px respectivamente */
             margin-top: 20px;
             margin-right: 40px;
+            /* Altura de 65px y ancho de 160px */
             height: 65px;
-            width:160px;
+            width: 160px;
+            /* Texto centrado dentro del contenedor */
             text-align: center;
         }
 
+        /* Estilos para div con clase exampleborderradiusf */
         div.exampleborderradiusf {
-            float:left;
+            /* Flota a la izquierda */
+            float: left;
+            /* Fondo gris oscuro */
             background-color: #464646;
+            /* Márgenes superior y derecho de 20px y 40px respectivamente */
             margin-top: 20px;
             margin-right: 40px;
+            /* Ancho y alto de 70px */
             width: 70px;
             height: 70px;
+            /* Texto centrado dentro del contenedor */
             text-align: center;    
+            /* Radio de esquina de 50%, creando un círculo */
             border-radius: 50%;
         }
 
+        /* Estilos para la etiqueta span dentro de las clases exampleborderradius */
         .examplelabelborderradius {
+            /* Texto blanco */
             color: white;
+            /* Tamaño de fuente de 20px */
             font-size: 20px;
+            /* Posición relativa con un desplazamiento superior de 20px */
             position: relative; 
             top: 20px;
         }
+    </style>
+</head>
 
-        </style>
-    </head>
-    <body>
-        <div class="exampleborderradiusa"><span class="examplelabelborderradius">A</span></div>
-        <div class="exampleborderradiusb"><span class="examplelabelborderradius">B</span></div>
-        <div class="exampleborderradiusc"><span class="examplelabelborderradius">C</span></div>
-        <div class="exampleborderradiusd"><span class="examplelabelborderradius">D</span></div>
-        <div class="exampleborderradiuse"><span class="examplelabelborderradius">E</span></div>
-        <div class="exampleborderradiusf"><span class="examplelabelborderradius">F</span></div>
-    
-
+<body>
+    <!-- Divs con diferentes estilos de bordes -->
+    <div class="exampleborderradiusa"><span class="examplelabelborderradius">A</span></div>
+    <div class="exampleborderradiusb"><span class="examplelabelborderradius">B</span></div>
+    <div class="exampleborderradiusc"><span class="examplelabelborderradius">C</span></div>
+    <div class="exampleborderradiusd"><span class="examplelabelborderradius">D</span></div>
+    <div class="exampleborderradiuse"><span class="examplelabelborderradius">E</span></div>
+    <div class="exampleborderradiusf"><span class="examplelabelborderradius">F</span></div>
 </body></html>

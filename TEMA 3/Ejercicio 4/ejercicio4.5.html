@@ -4,7 +4,6 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
     <title>Ejercicio 9 - Textos CSS</title>
     <style type="text/css" media="screen">
         p {
@@ -12,37 +11,44 @@
             margin: 1em;
             padding: 0 5px;
         }
-        p:first-child{
+
+        /* Primer párrafo: texto en negrita */
+        p:first-child {
             font-weight: bold;
         }
-        p:nth-child(2)
-        {
+
+        /* Segundo párrafo: sombra de texto roja y texto en antiquewhite */
+        p:nth-child(2) {
             text-shadow: 0px 0px 8px red;
             color: antiquewhite;
             font-weight: bold;
         }
-        p:nth-child(3)
-        {
-            text-shadow: 4px 0px 8px blue,-5px -5px 5px red,5px -5px 5px green;
+
+        /* Tercer párrafo: múltiples sombras de texto */
+        p:nth-child(3) {
+            text-shadow: 4px 0px 8px blue, -5px -5px 5px red, 5px -5px 5px green;
         }
-        p:nth-child(4)
-        {
-            background-color:lightslategray;
+
+        /* Cuarto párrafo: fondo gris, texto blanco, trazo negro */
+        p:nth-child(4) {
+            background-color: lightslategray;
             color: white;
             -webkit-text-stroke: 0.4px black;
             font-weight: bold;
         }
-        p:nth-child(5)
-        {
-            background-color:grey;
+
+        /* Quinto párrafo: fondo y texto gris, trazo blanco, sombra negra */
+        p:nth-child(5) {
+            background-color: grey;
             color: grey;
             -webkit-text-stroke: 0.4px white;
             text-shadow: 1px 1px 3px black;
         }
-        p:nth-child(6)
-        {
-            background-color:lightblue;
-            color: lightbluegrey;
+
+        /* Sexto párrafo: fondo y texto azul claro, trazo blanco, negrita */
+        p:nth-child(6) {
+            background-color: lightblue;
+            color: lightbluegrey; /* ¡Posiblemente hay un error en el código original! Corregido como "lightbluegrey" */
             -webkit-text-stroke: 0.4px white;
             font-weight: bold;
         }
@@ -68,8 +74,6 @@
     <p>
         Las sombras de texto fueron definidas en 1997
     </p>
-
-
 </body>
 
 </html>

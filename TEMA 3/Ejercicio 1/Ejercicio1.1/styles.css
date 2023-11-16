@@ -1,122 +1,131 @@
+/* Estilos globales para el cuerpo del documento */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: Arial, sans-serif; /* Tipo de fuente para todo el cuerpo del documento */
+    margin: 0; /* Elimina los márgenes predeterminados del cuerpo del documento */
 }
 
+/* Estilos para el encabezado del documento */
 header {
-    background-color: yellow;
-    text-align: center;
-    margin: 0;
-    padding: 15px 0;
+    background-color: yellow; /* Color de fondo del encabezado */
+    text-align: center; /* Centra el texto dentro del encabezado */
+    margin: 0; /* Elimina los márgenes predeterminados del encabezado */
+    padding: 15px 0; /* Agrega relleno al encabezado (15px arriba/abajo, 0 a los lados) */
 }
 
+/* Estilos para el contenedor principal que envuelve los elementos */
 .contenedorPrincipal {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; /* Utiliza el modelo de diseño flexible (flexbox) */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
 }
 
+/* Estilos para la sección izquierda del diseño */
 .izquierda {
-   
-    background-color: lightgray;
-    padding: 20px;
-    box-sizing: border-box;
+    background-color: lightgray; /* Color de fondo de la sección izquierda */
+    padding: 20px; /* Añade relleno a la sección izquierda */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho/altura total del elemento */
 }
 
+/* Estilos para la sección derecha del diseño */
 .derecha {
-    flex: 2;
-    padding: 20px;
-    box-sizing: border-box;
+    flex: 2; /* Asigna 2 partes del espacio disponible a la sección derecha */
+    padding: 20px; /* Añade relleno a la sección derecha */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho/altura total del elemento */
 }
 
+/* Estilos para la sección de publicaciones (posts) */
 .posts {
-    flex: 0.5;
-    margin: 10px;
-    /*background-color: lightblue;*/
-    padding: 20px;
-    box-sizing: border-box;
-    border :2px dotted green;
-    width: fit-content;
-    height: fit-content;
+    flex: 0.5; /* Asigna 0.5 partes del espacio disponible a la sección de publicaciones */
+    margin: 10px; /* Añade márgenes a la sección de publicaciones */
+    padding: 20px; /* Añade relleno a la sección de publicaciones */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho/altura total del elemento */
+    border: 2px dotted green; /* Agrega un borde punteado verde alrededor de la sección de publicaciones */
+    width: fit-content; /* Establece el ancho al contenido del elemento */
+    height: fit-content; /* Establece la altura al contenido del elemento */
 }
 
+/* Estilos para la barra vertical */
 .vertical {
-    
-    width: 5px;
-    background-color: green;
-    margin: 0;
+    width: 5px; /* Establece el ancho de la barra vertical */
+    background-color: green; /* Color de fondo de la barra vertical */
+    margin: 0; /* Elimina los márgenes predeterminados de la barra vertical */
 }
-ul{
-    list-style: none;
+
+/* Estilos para las listas no ordenadas (ul) */
+ul {
+    list-style: none; /* Elimina los estilos de viñetas de las listas no ordenadas */
 }
+
+/* Estilos para las listas dentro de la navegación (nav) */
 nav ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Elimina los estilos de viñetas de las listas dentro de la navegación */
+    padding: 0; /* Elimina el relleno predeterminado de las listas dentro de la navegación */
 }
 
+/* Estilos para los elementos de la lista dentro de la navegación */
 nav ul li {
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Agrega espacio entre los elementos de la lista dentro de la navegación */
 }
 
+/* Estilos para los enlaces dentro de las listas */
 ul li a {
-    text-decoration: none;
-    color: black;
+    text-decoration: none; /* Elimina la decoración de subrayado de los enlaces */
+    color: black; /* Establece el color del texto de los enlaces a negro */
 }
 
+/* Estilos para las listas dentro de la sección de publicaciones */
 .posts ul {
- 
-    padding: 0;
+    padding: 0; /* Elimina el relleno predeterminado de las listas dentro de la sección de publicaciones */
 }
 
-
-
-
-
-
-
-.hrFooter{
-    margin-top: 0;
-}
-footer{
-    text-align: center;
+/* Estilos para la línea horizontal en el pie de página */
+.hrFooter {
+    margin-top: 0; /* Elimina el margen superior de la línea horizontal en el pie de página */
 }
 
+/* Estilos para el pie de página */
+footer {
+    text-align: center; /* Centra el texto dentro del pie de página */
+}
+
+/* Estilos responsivos para pantallas con un ancho máximo de 768px */
 @media screen and (max-width: 768px) {
     .contenedorPrincipal {
-        flex-direction: column;
+        flex-direction: column; /* Cambia la dirección del flujo a columna en pantallas más pequeñas */
     }
     .izquierda, .derecha {
-        width: 100%;
+        width: 100%; /* Establece el ancho al 100% para ocupar todo el espacio disponible */
     }
-    .izquierda{
-        border-bottom: 3px solid green;
+    .izquierda {
+        border-bottom: 3px solid green; /* Agrega un borde inferior verde a la sección izquierda */
     }
     .vertical {
-        display: none;
-        margin: 10px auto;
+        display: none; /* Oculta la barra vertical en pantallas más pequeñas */
+        margin: 10px auto; /* Agrega márgenes automáticos en la parte superior e inferior */
     }
 }
 
+/* Estilos responsivos para pantallas con un ancho máximo de 508px */
 @media screen and (max-width: 508px) {
-    body{
-        text-align: center;
+    body {
+        text-align: center; /* Centra el texto en el cuerpo del documento en pantallas más pequeñas */
     }
     .contenedorPrincipal {
-        flex-direction: column;
+        flex-direction: column; /* Cambia la dirección del flujo a columna en pantallas aún más pequeñas */
     }
-    .posts{
-        margin: auto;
+    .posts {
+        margin: auto; /* Centra la sección de publicaciones en pantallas más pequeñas */
     }
     .izquierda, .derecha {
-        width: 100%;
+        width: 100%; /* Establece el ancho al 100% para ocupar todo el espacio disponible */
     }
-    .izquierda{
-        border-bottom: 3px solid green;
+    .izquierda {
+        border-bottom: 3px solid green; /* Agrega un borde inferior verde a la sección izquierda */
     }
     .vertical {
-        display: none;
-        margin: 10px auto;
+        display: none; /* Oculta la barra vertical en pantallas aún más pequeñas */
+        margin: 10px auto; /* Agrega márgenes automáticos en la parte superior e inferior */
     }
-    .hrFooter{
-        margin-top: 20px;
+    .hrFooter {
+        margin-top: 20px; /* Agrega un margen superior mayor a la línea horizontal en el pie de página */
     }
 }

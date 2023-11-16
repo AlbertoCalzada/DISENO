@@ -7,76 +7,93 @@
 
     <title>Ejercicio 4 - Transformaciones CSS</title>
     <style type="text/css" media="screen">
+        /* Establece el modelo de caja para todos los elementos */
         *{
             box-sizing: border-box;
         }
+        
+        /* Estilos para el título h2 */
         h2{
             margin-top: 40px;
             margin-bottom: 40px;
         }
         
+        /* Estilos para los contenedores div dentro de #container */
         #container>div {
-            margin-bottom: 10px;
-            border: 1px dotted #000;
-            width: 250px;
+            margin-bottom: 10px; /* Margen inferior para separar los contenedores */
+            border: 1px dotted #000; /* Borde punteado para los contenedores */
+            width: 250px; /* Ancho predeterminado para los contenedores */
         }
 
+        /* Estilos para la clase .box */
         .box {
-            width: 200px;
-            height: 100px;
-            border: 5px solid gray;
-            background-color: silver;
-            margin: 60px auto;
+            width: 200px; /* Ancho de la caja */
+            height: 100px; /* Altura de la caja */
+            border: 5px solid gray; /* Borde sólido de 5px en color gris */
+            background-color: silver; /* Color de fondo plateado */
+            margin: 60px auto; /* Márgenes superior e inferior de 60px, centrado horizontalmente */
         }
+
+        /* Estilos generales para los contenedores div */
         div{
-            margin: 40px;
-            
+            margin: 40px; /* Márgenes internos para los contenedores div */
         }
+
+        /* Transformación: translate para #ex01 */
         #ex01
         {
-            transform: translate(100px, 50px);
+            transform: translate(100px, 50px); /* Mueve los elementos 100px hacia la derecha y 50px hacia abajo */
         }
+
+        /* Transformación: scale para #ex02 */
         #ex02{
-            transform: scale(2, 2) translate(300px, 50px);
-          
+            transform: scale(2, 2) translate(300px, 50px); /* Escala los elementos al doble y los mueve 300px hacia la derecha y 50px hacia abajo */
         }
 
+        /* Transformación: rotate para #ex03 */
         #ex03{
-            transform: rotate(45deg);
+            transform: rotate(45deg); /* Rota los elementos 45 grados en sentido horario */
         }
 
+        /* Transformación: skew para #ex04 */
         #ex04{
-            transform: skew(25deg, 25deg);
+            transform: skew(25deg, 25deg); /* Sesga los elementos 25 grados en los ejes x e y */
         }
     </style>
 </head>
 
 <body>
+    <!-- Contenedor principal que contiene varios ejemplos de transformaciones -->
     <div id="container">
         <h2>Translate</h2>
+        <!-- Ejemplo 1: translate -->
         <div id="ex01">
             <div class="box">&nbsp;</div>
             <div class="box">&nbsp;</div>
         </div>
+        
         <h2>Scale</h2>
+        <!-- Ejemplo 2: scale -->
         <div id="ex02">
             <div class="box">&nbsp;</div>
             <div class="box">&nbsp;</div>
         </div>
+        
         <h2>Rotate</h2>
+        <!-- Ejemplo 3: rotate -->
         <div id="ex03">
             <div class="box">&nbsp;</div>
             <div class="box">&nbsp;</div>
             <div class="box">&nbsp;</div>
         </div>
+        
         <h2>Skew</h2>
+        <!-- Ejemplo 4: skew -->
         <div id="ex04">
             <div class="box">&nbsp;</div>
             <div class="box">&nbsp;</div>
         </div>
     </div>
-
-
 </body>
 
 </html>

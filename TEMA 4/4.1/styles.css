@@ -1,14 +1,17 @@
+/* Establece el modelo de caja y resetea márgenes y rellenos predeterminados */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Configuración básica del cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
 }
 
+/* Contenedor principal de la página */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -18,22 +21,26 @@ body {
     border-radius: 5px;
 }
 
+/* Estilo del encabezado principal */
 h1 {
     text-align: center;
     margin-bottom: 20px;
     color: #333;
 }
 
+/* Estilo para agrupar elementos del formulario */
 .form-group {
     margin-bottom: 20px;
 }
 
+/* Estilo para etiquetas en el formulario */
 label {
     font-weight: bold;
     color: #333;
     margin-bottom: 5px;
 }
 
+/* Estilo para inputs, datalists y progress bars en el formulario */
 input, datalist, progress {
     width: 100%;
     padding: 10px;
@@ -41,13 +48,13 @@ input, datalist, progress {
     border-radius: 3px;
 }
 
-
+/* Estilo específico para el botón de envío del formulario */
 input[type="submit"] {
     background-color: #007bff;
     color: #fff;
-    
 }
 
+/* Efecto hover para el botón de envío */
 input[type="submit"]:hover {
     background-color: #0056b3;
 }

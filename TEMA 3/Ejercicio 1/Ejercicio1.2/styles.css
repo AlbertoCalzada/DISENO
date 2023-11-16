@@ -1,53 +1,60 @@
+/* Estilos para el cuerpo del documento en pantallas con un ancho mínimo de 800px */
 @media screen and (min-width: 800px) {
     body {
-        background-color: gainsboro;
+        background-color: gainsboro; /* Cambia el color de fondo del cuerpo a gainsboro */
     }
 }
 
-@media screen and (min-width: 480px)and (max-width:799px) {
+/* Estilos para el cuerpo del documento en pantallas con un ancho mínimo de 480px y un ancho máximo de 799px */
+@media screen and (min-width: 480px) and (max-width: 799px) {
     body {
-        background-color:bisque;
+        background-color: bisque; /* Cambia el color de fondo del cuerpo a bisque */
     }
 }
 
+/* Estilos para el cuerpo del documento en pantallas con un ancho máximo de 479px */
 @media screen and (max-width: 479px) {
     body {
-        background-color: lightgreen;
+        background-color: lightgreen; /* Cambia el color de fondo del cuerpo a lightgreen */
     }
 }
+
+/* Estilos para todas las imágenes en el documento */
 img {
-    width: 200px;
-}
-nav a
-{
-    padding-right: 5%;
+    width: 200px; /* Establece un ancho fijo de 200px para todas las imágenes */
 }
 
+/* Estilos para los enlaces dentro de la navegación */
+nav a {
+    padding-right: 5%; /* Agrega relleno al lado derecho de los enlaces de navegación */
+}
+
+/* Estilos para el cuerpo del documento en general */
 body {
-    text-align: center;
-    margin: auto;
-    width: 100%;
+    text-align: center; /* Centra el texto en el cuerpo del documento */
+    margin: auto; /* Centra el cuerpo del documento en la pantalla */
+    width: 100%; /* Establece el ancho del cuerpo al 100% del contenedor padre */
 }
 
+/* Estilos para el contenedor principal que envuelve los elementos */
 .contenedorPrincipal {
-    display: flex;
-    width: 80%;
-    text-align: center;
-    margin: 5% auto;
-    border: 1px solid black;
-   
-    
+    display: flex; /* Utiliza el modelo de diseño flexible (flexbox) */
+    width: 80%; /* Establece el ancho del contenedor principal al 80% del contenedor padre */
+    text-align: center; /* Centra el texto dentro del contenedor principal */
+    margin: 5% auto; /* Establece márgenes en la parte superior e inferior al 5%, y márgenes laterales automáticos */
+    border: 1px solid black; /* Agrega un borde sólido negro alrededor del contenedor principal */
 }
 
+/* Estilos para el primer contenedor dentro del contenedor principal */
 .contenedorUno {
-    float: left;
-    width: 40%;
-    padding: 2%;
+    float: left; /* Hace que el primer contenedor flote a la izquierda del contenedor principal */
+    width: 40%; /* Establece el ancho del primer contenedor al 40% del contenedor principal */
+    padding: 2%; /* Añade relleno alrededor del contenido del primer contenedor */
 }
 
+/* Estilos para el segundo contenedor dentro del contenedor principal */
 .contenedorDos {
-    float: right;
-    width: 40%;
-    padding: 2%;
-    
+    float: right; /* Hace que el segundo contenedor flote a la derecha del contenedor principal */
+    width: 40%; /* Establece el ancho del segundo contenedor al 40% del contenedor principal */
+    padding: 2%; /* Añade relleno alrededor del contenido del segundo contenedor */
 }

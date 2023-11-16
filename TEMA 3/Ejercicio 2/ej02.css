@@ -8,121 +8,118 @@ Updated by: Your name here
 /* ----------------------------
 simple reset
 ---------------------------- */
-
 html, body, ul, ol, li, form, fieldset, legend
 {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
 }
 
-h1, h2, h3, h4, h5, h6, p { margin-top: 0; }
-fieldset,img { border: 0; }
-legend { color: #000; }
-li { list-style: none; }
-sup { vertical-align: text-top; }
-sub { vertical-align: text-bottom; }
+h1, h2, h3, h4, h5, h6, p { margin-top: 0; } /* Elimina los márgenes superiores de los encabezados y los párrafos */
+fieldset,img { border: 0; } /* Elimina bordes en fieldset e imágenes */
+legend { color: #000; } /* Establece el color del texto de la leyenda */
+li { list-style: none; } /* Elimina los estilos de viñetas en las listas */
+sup { vertical-align: text-top; } /* Alinea los superíndices con la parte superior del texto */
+sub { vertical-align: text-bottom; } /* Alinea los subíndices con la parte inferior del texto */
 
 table
 {
-    border-collapse: collapse;
-    border-spacing: 0;
+    border-collapse: collapse; /* Colapsa los bordes de la tabla */
+    border-spacing: 0; /* Elimina el espacio entre las celdas de la tabla */
 }
 
 caption, th, td
 {
-    text-align: left;
-    vertical-align: top;
-    font-weight: normal;
+    text-align: left; /* Alinea el texto de la leyenda, las celdas de encabezado y las celdas de datos a la izquierda */
+    vertical-align: top; /* Alinea el contenido en la parte superior de las celdas */
+    font-weight: normal; /* Establece el peso de la fuente como normal */
 }
 
 input, textarea, select
 {
-    font-size: 110%;
-    line-height: 1.1;
+    font-size: 110%; /* Aumenta el tamaño de la fuente para los elementos de formulario */
+    line-height: 1.1; /* Establece la altura de línea para los elementos de formulario */
 }
 
 abbr, acronym
 {
-    border-bottom: .1em dotted;
-    cursor: help;
+    border-bottom: .1em dotted; /* Agrega un borde inferior punteado a abreviaturas y acrónimos */
+    cursor: help; /* Cambia el cursor a una mano con un signo de interrogación para indicar ayuda al pasar el mouse */
 }
 
 body
 {
-    margin: 20px;
-    color: #000;
-    background: #fff;
-    font: 90%/1.3 "DejaVu Sans", "URW Gothic L", "Helvetica Neue", Helvetica, Arial, "Microsoft Sans Serif", sans-serif;
+    margin: 20px; /* Establece el margen del cuerpo */
+    color: #000; /* Establece el color del texto del cuerpo */
+    background: #fff; /* Establece el color de fondo del cuerpo */
+    font: 90%/1.3 "DejaVu Sans", "URW Gothic L", "Helvetica Neue", Helvetica, Arial, "Microsoft Sans Serif", sans-serif; /* Establece la fuente del cuerpo con un tamaño y espaciado específicos */
 }
 
 #container
 {
-    float: left;
-    width: 1000px;
-    background: #bbb;
+    float: left; /* Hace que el contenedor flote a la izquierda */
+    width: 1000px; /* Establece el ancho del contenedor a 1000px */
+    background: #bbb; /* Establece el color de fondo del contenedor */
 }
 
 #nav
 {
-    float: left;
-    width: 200px;
-    background: lime;
+    float: left; /* Hace que la navegación flote a la izquierda */
+    width: 200px; /* Establece el ancho de la navegación a 200px */
+    background: lime; /* Establece el color de fondo de la navegación */
 }
 
 #content
 {
-    float: left;
-    width: 550px;
-    margin: 0 0 0 25px;
-    background: yellow;
+    float: left; /* Hace que el contenido flote a la izquierda */
+    width: 550px; /* Establece el ancho del contenido a 550px */
+    margin: 0 0 0 25px; /* Establece los márgenes del contenido */
+    background: yellow; /* Establece el color de fondo del contenido */
 }
 
 #extras
 {
-    float: right;
-    width: 200px;
-    background: gray;
+    float: right; /* Hace que los extras floten a la derecha */
+    width: 200px; /* Establece el ancho de los extras a 200px */
+    background: gray; /* Establece el color de fondo de los extras */
 }
 
 .feature-image
 {
-    float: right;
-    margin: 0 0 10px 10px;
+    float: right; /* Hace que la imagen de característica flote a la derecha */
+    margin: 0 0 10px 10px; /* Establece los márgenes de la imagen de característica */
 }
 
-
+/* Estilos para pantallas con un ancho máximo de 1000px */
 @media screen and (max-width:1000px)
 {
     #extras{
-        float: none;
-        margin: auto;
-        width: 550px;
+        float: none; /* Elimina el flotador de los extras */
+        margin: auto; /* Centra los extras horizontalmente */
+        width: 550px; /* Establece el ancho de los extras a 550px */
     }
-    
 }
 
+/* Estilos para pantallas con un ancho máximo de 480px */
 @media screen and (max-width:480px)
 {
    body{
-    
-    width: 100%;
+    width: 100%; /* Establece el ancho del cuerpo al 100% */
    }
    #container{
-    float: none;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 0px;
+    float: none; /* Elimina el flotador del contenedor */
+    display: flex; /* Utiliza el modelo de diseño flexible (flexbox) */
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben */
+    flex-direction: column; /* Cambia la dirección del flujo a columna */
+    width: 100%; /* Establece el ancho del contenedor al 100% */
+    margin-left: 0px; /* Elimina el margen izquierdo del contenedor */
    }
 
    .feature-image {
-    display: none;
+    display: none; /* Oculta la imagen de característica */
    }
    #nav,#content,#extras{
-    float:none;
-    width: 100%;
-    margin-left: 0px;
+    float:none; /* Elimina el flotador de la navegación, el contenido y los extras */
+    width: 100%; /* Establece el ancho de la navegación, el contenido y los extras al 100% */
+    margin-left: 0px; /* Elimina el margen izquierdo de la navegación, el contenido y los extras */
    }
 }
-

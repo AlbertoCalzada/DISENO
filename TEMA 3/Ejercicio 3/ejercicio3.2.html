@@ -7,28 +7,30 @@
 
     <title>Ejercicio 5 - Transiciones CSS</title>
     <style type="text/css" media="screen">
+        /* Estilos para el contenedor principal */
         #container {
             width: 500px;
             height: 500px;
             position: relative;
         }
 
+        /* Definición de la animación usando keyframes */
         @keyframes Animacion {
             0% {
-                
+                /* Definición del estado inicial de la animación */
             }
 
-            
-
             100% {
+                /* Definición del estado final de la animación */
                 transform: rotate(270deg) scale(0.5, 0.5);
-                color:yellow;
-                left: 800px; 
+                color: yellow;
+                left: 800px;
                 font-size: 18px;
                 background-color: blue;
             }
         }
 
+        /* Estilos para la caja */
         .box {
             width: 100px;
             height: 100px;
@@ -36,15 +38,13 @@
             font-size: 20px;
             position: absolute;
             padding: 5px;
+            /* Asignación de la animación a la caja */
             animation-name: Animacion;
-  
-            animation-duration: 8s;
-            
-            animation-fill-mode: forwards;
-            
+            animation-duration: 8s; /* Duración de la animación */
+            animation-fill-mode: forwards; /* La caja retiene el último fotograma de la animación después de finalizar */
         }
 
-
+        /* Estilos adicionales al pasar el ratón sobre la caja */
         .box:hover {
             width: 50px;
             height: 50px;
@@ -54,6 +54,7 @@
             position: absolute;
         }
 
+        /* Posicionamiento de las cajas en diferentes ejemplos */
         .ex01 .box {
             left: 10px;
             top: 10px;
@@ -73,38 +74,29 @@
             left: 10px;
             top: 370px;
         }
-
-        /*@keyframes Animacion {
-          from{
-            transform: rotate(0deg);
-          } to {
-            transform: rotate(270deg);
-            background-color: blue;
-          }
-            
-
-            
-        }*/
     </style>
 </head>
 
 <body>
+    <!-- Contenedor principal que contiene las cajas -->
     <div id="container">
+        <!-- Ejemplo 1 -->
         <div class="ex01">
             <div class="box">Caja 1</div>
         </div>
+        <!-- Ejemplo 2 -->
         <div class="ex02">
             <div class="box">Caja 2</div>
         </div>
+        <!-- Ejemplo 3 -->
         <div class="ex03">
             <div class="box">Caja 3</div>
         </div>
+        <!-- Ejemplo 4 -->
         <div class="ex04">
             <div class="box">Caja 4</div>
         </div>
     </div>
-
-
 </body>
 
 </html>

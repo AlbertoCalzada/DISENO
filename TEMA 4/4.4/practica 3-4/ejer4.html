@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 4</title>
     <style>
+        /* Estilos CSS para el diseño de la página */
         .flex {
             display: flex;
             flex-wrap: wrap;
@@ -47,10 +48,10 @@
         p{
             text-align: center;
         }
-
     </style>
 
     <script>
+        // Script JavaScript para la funcionalidad de arrastrar y soltar
         var contador = 0;
         let products = [
             {
@@ -71,10 +72,12 @@
             }
         ];
 
+        // Función para permitir soltar en la cesta
         function allowDrop(ev) {
             ev.preventDefault();
         }
 
+        // Función para agregar un objeto a la cesta
         function add(ev) {
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
@@ -89,6 +92,7 @@
             }
         }
 
+        // Función para quitar un objeto de la cesta
         function remove(ev) {
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
@@ -103,6 +107,7 @@
             }
         }
 
+        // Funciones para establecer datos de arrastre para diferentes objetos
         function silla(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
         }
@@ -119,6 +124,7 @@
 </head>
 
 <body>
+    <!-- Sección para elegir objetos -->
     <div>
         <h2>Elige un objeto para comprar</h2><br />
         <div class="flex" id="div1" ondrop="remove(event)" ondragover="allowDrop(event)">
@@ -129,6 +135,7 @@
         </div>
     </div>
 
+    <!-- Sección para la cesta de la compra -->
     <h2>Cesta de la compra</h2>
     <div id="div2" ondrop="add(event)" ondragover="allowDrop(event)"></div>
     <p><b>Total a pagar:</b><input type="text" id="precioTotal" size='6'>€</p>

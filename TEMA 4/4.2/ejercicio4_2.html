@@ -5,14 +5,17 @@
     <title>Reproductor de Vídeo</title>
 </head>
 <body>
+    <!-- Encabezado -->
     <h1>Reproductor de Vídeo</h1>
 
+    <!-- Reproductor de vídeo con controles -->
     <video id="videoPlayer" controls>
         <source src="./video/video1.mp4" type="video/mp4">
         <source src="./video/video1.mp4" type="video/webm">
         Tu navegador no soporta la reproducción de vídeo.
     </video>
 
+    <!-- Botones de control -->
     <div>
         <button onclick="playVideo()">Reproducir</button>
         <button onclick="pauseVideo()">Pausa</button>
@@ -23,12 +26,16 @@
         <button onclick="seekVideo('end')">Fin</button>
     </div>
 
+    <!-- Control de volumen -->
     <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="1" oninput="setVolume()">
 
+    <!-- Botón para pantalla completa -->
     <button onclick="toggleFullScreen()">Pantalla completa</button>
 
+    <!-- Barra de progreso -->
     <progress id="progressBar" max="100" value="0"></progress>
 
+    <!-- Lista de reproducción -->
     <h2>Lista de Reproducción</h2>
     <ul>
         <li><a href="./video/video1.mp4" onclick="changeVideo('video1.mp4')">Video 1</a></li>
@@ -36,11 +43,14 @@
         <li><a href="./video/video3.mp4" onclick="changeVideo('video3.mp4')">Video 3</a></li>
     </ul>
 
+    <!-- Script JavaScript -->
     <script>
+        // Obtiene referencias a elementos del DOM
         const videoPlayer = document.getElementById('videoPlayer');
         const volumeControl = document.getElementById('volumeControl');
         const progressBar = document.getElementById('progressBar');
 
+        // Funciones para controlar el vídeo
         function playVideo() {
             videoPlayer.play();
         }
@@ -62,10 +72,12 @@
             }
         }
 
+        // Establece el volumen del vídeo
         function setVolume() {
             videoPlayer.volume = volumeControl.value;
         }
 
+        // Cambia al modo de pantalla completa
         function toggleFullScreen() {
             if (videoPlayer.requestFullscreen) {
                 videoPlayer.requestFullscreen();
@@ -76,6 +88,7 @@
             }
         }
 
+        // Actualiza la barra de progreso
         videoPlayer.addEventListener('timeupdate', updateProgressBar);
 
         function updateProgressBar() {
@@ -83,6 +96,7 @@
             progressBar.value = percent;
         }
 
+        // Cambia el vídeo en función de la lista de reproducción
         function changeVideo(source) {
             videoPlayer.src = source;
             videoPlayer.load();
