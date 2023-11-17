@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supuesto Practico</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        @font-face {
+            font-family: 'Amhara_reduced';
+            src: url(./Amhara_reduced.otf);
+        }
+
+        header img {
+            width: 400px;
+            transition: transform 1s ease-in-out;
+        }
+
+        header img:hover {
+            transform: rotate(360deg);
+        }
+
+        nav {
+            width: 100%;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu ul li {
+            display: inline-block;
+            border-radius: 20%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .menu ul li a {
+            color: orangered;
+            text-decoration: none;
+            background-color: black;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .menu ul li:hover {
+            transform: rotate(180deg);
+        }
+
+        p:hover {
+            background-color: yellow;
+        }
+
+        .menu ul li:hover a {
+            color: yellow;
+        }
+
+        .menu {
+            background-color: grey;
+            height: 80px;
+            left: 0;
+        }
+
+        header div {
+            color: blue;
+        }
+
+        h2 {
+            color: blue;
+            margin-top: 40px;
+        }
+
+        .video {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .videoPlayer {
+            width: 500px;
+        }
+
+        .formulario {
+            width: 100%;
+        }
+
+        .formulario h2 {
+            text-align: center;
+        }
+
+        .formulario label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .formulario input,
+        .formulario select {
+            display: inline-block;
+            width: 200px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+
+        .cuadrado {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border: 1px solid black;
+        }
+
+        .formulario input[type="submit"] {
+            width: 50px;
+            margin-left: 5%;
+        }
+
+        .formulario form {
+            background-color: grey;
+            border-radius: 3%;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        main h1 a:hover {
+            color: red;
+        }
+
+        .canvas h2 {
+            text-align: center;
+        }
+
+        .canvas {
+            background-color: grey;
+            margin-bottom: 5%;
+            
+        }
+
+        .enLinea {
+            display: flex;
+            align-items: center; /* Centrar verticalmente */
+        }
+
+        .enLinea .cuadrado {
+            margin-right: 10px;
+        }
+
+        @media only screen and (min-width: 768px) and (max-width: 1024px) {
+            body {
+                font-size: 18px;
+            }
+
+            .formulario label,
+            .formulario input,
+            .formulario select {
+                width: 60%;
+                display: block;
+            }
+
+            .formulario input[type="submit"] {
+                width: 60%;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            body {
+                font-size: 20px;
+            }
+
+            .formulario label,
+            .formulario input,
+            .formulario select {
+                width: 200px;
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            .formulario input[type="submit"] {
+                width: 50px;
+                margin-left: 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="./logo.jpg" alt="logo">
+        <div>
+            <h2>EL OUNI ADIFO</h2>
+            <p class="amarillo">Unos ingenieros y un alien han creado un platillo volante</p>
+        </div>
+    </header>
+    <nav class="menu">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Conoce ADIFO</a></li>
+            <li><a href="#">Contacta con nosotros</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="enLinea">
+            <div class="cuadrado">Dk</div>
+            <h1><a href="#">Que sabemos del OVNI</a></h1>
+        </div>
+
+
+
+        <p>Si se ve desde lejos parecera que es un OUNI pero en realidad es un objeto volador identificado</p>
+        <h2>ADIFO</h2>
+        <p>Se trata de un platillo volante creado por dos Ingenieros rumanos que se han pasado dos décadas investigando
+            cómo hacer para que un objeto en forma de platillo sea capaz de alzar el vuelo desplazarse por el aire
+        ADIFO Aircraft ADIFO es el nombre que recibe este objeto. Son las siglas inglesas de All Directional Flying
+            Object, objeto volador todo direccional</p>
+    </main>
+    <div class="video">
+        <h2>Presentacion de ADIFO</h2>
+        <video class="videoPlayer" controls poster="poster.JPG">
+            <source src="./adifo.mp4" type="video/mp4">
+
+            Tu navegador no soporta la reproducción de vídeo.
+        </video>
+    </div>
+    <div class="formulario">
+        <h2>Este es un formulario de amigo de DIFO</h2>
+        <form id="miFormulario" action="/" method="post">
+            <label for="alias">Alias:</label>
+            <input type="text" name="alias" required pattern="[a-z0-9]{5,20}" placeholder="Alias" autofocus>
+            <br>
+
+            <label for="tratamiento">Tratamiento:</label>
+            <select name="tratamiento" required>
+                <option value="Sr">Sr</option>
+                <option value="Sra">Sra</option>
+            </select>
+            <br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" name="edad" required min="18" max="100" placeholder="Edad">
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" required>
+            <br>
+
+            <label for="pagina-web">Pagina Web:</label>
+            <input type="text" name="pagina-web">
+            <br>
+
+            <label for="nacimiento">Nacimiento:</label>
+            <input type="date" name="nacimiento" placeholder="Fecha de nacimiento">
+            <br>
+
+            <label for="entusiasmo">Nivel de entusiasmo:</label>
+            <input type="range" name="entusiasmo" min="1" max="10" value="5" placeholder="Nivel de entusiasmo">
+            <br>
+
+            <input type="submit" value="Enviar" onclick="guardarNombre()">
+        </form>
+    </div>
+
+    <script>
+        function guardarNombre() {
+
+            var nombre = document.getElementById('miFormulario').elements['alias'].value;
+
+
+            localStorage.setItem('nombre', nombre);
+        }
+    </script>
+
+    <div class="canvas">
+        <h2>Canvas Fundador de Meta</h2>
+        <canvas id="cuadricula" width="250" height="250"></canvas>
+        <script type="text/javascript" src="script.js"></script>
+    </div>
+</body>
+
+</html>
