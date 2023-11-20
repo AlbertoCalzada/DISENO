@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-2.2.0.min.js"></script>
+</head>
+
+<body>
+    <h2 class="hundirraton">Encabezado</h2>
+    <h2 class="levantarraton">Encabezado</h2>
+
+    <script>
+
+        $("h2.hundirraton").mousedown(function () {
+            // al hacer click
+            $(this).css({
+                "color": "red",
+                "font-size": "24px", 
+                
+            });
+        });
+
+
+        $("h2.levantarraton").mouseup(function () {
+            // al hacer click
+            $(this).css({
+                "color": "blue",
+                "font-weight": "bold", 
+               
+            });
+        });
+    </script>
+</body>
+
+</html>

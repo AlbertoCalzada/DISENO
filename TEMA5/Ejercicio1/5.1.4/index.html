@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-2.2.0.min.js"></script>
+</head>
+
+<body>
+    <input class="changeToB" type="button" value="Poner Clase">
+    <input class="changeToA" type="button" value="Quitar Clase">
+    <p>Parrafo 1: tiene .clasea inicialmente el botón "poner clase" pondrá la .claseb y el botón "quitar clase" quitará
+        la clase que tenga</p>
+
+    <script>
+        $("input.changeToB").click(function () {
+            $("p").css({
+                "color":"green"
+            })
+        })
+
+        $("input.changeToA").click(function () {
+            $("p").css({
+                "color":"black"
+            })
+        })
+    </script>
+</body>
+
+</html>

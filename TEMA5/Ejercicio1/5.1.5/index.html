@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-2.2.0.min.js"></script>
+    <style>
+        table {
+            border: 1px black solid;
+            margin-top: 20px;
+            width: 500px;
+            height: 200px;
+
+
+        }
+
+        table tr td {
+            background-color: rgb(132, 132, 235);
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Efectos Visuales</h3>
+
+    <input class="show" type="button" value="show">
+    <input class="hide" type="button" value="hide">
+    <input class="fadeIn" type="button" value="fadeIn">
+    <input class="fadeOut" type="button" value="fadeOut">
+    <input class="fadeTo" type="button" value="fadeTo">
+    <input class="animate" type="button" value="animate">
+    <br>
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <script>
+        $("input").click(function () {
+            switch (this.className) {
+                case "show":
+                    $("table").css({
+                        "visibility": "visible"
+                    })
+                    break;
+                case "hide":
+                    $("table").css({
+                        "visibility": "hidden"
+                    })
+                    break;
+                case "fadeIn":
+                    $("table").fadeIn();
+                    break;
+                case "fadeOut":
+                    $("table").fadeOut();
+                    break;
+                case "fadeTo":
+                    $("table").fadeTo("slow", 0.5);
+                    break;
+                case "animate":
+                    $("table").animate({
+                        opacity: 'toggle',
+                        height: 'toggle'
+                    });
+                    break;
+            }
+        });
+    </script>
+</body>
+
+</html>

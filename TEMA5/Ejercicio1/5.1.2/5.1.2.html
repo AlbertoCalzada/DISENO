@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-2.2.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Encabezado 1</h2>
+    <h2>Encabezado 2</h2>
+    <h2>Encabezado 3</h2>
+
+    <script>
+
+        // Selecciona todos los encabezados h2 y agrega un evento para el mouseover
+        $("h2").mouseover(function () {
+           
+            $(this).css("color", "red");
+        });
+
+        // Agrega un evento para el mouseout para restaurar el color original
+        $("h2").mouseout(function () {
+           
+            $(this).css("color", "");
+        });
+
+    </script>
+</body>
+
+</html>
