@@ -8,6 +8,7 @@
     <style>
         body {
             margin: 0;
+            font-family: 'Amhara_reduced';
         }
 
         @font-face {
@@ -271,6 +272,8 @@
 
 
             localStorage.setItem('nombre', nombre);
+            document.cookie = "test1=Hola"; //para cookies
+            sessionStorage.setItem('nombre', nombre); //para sesionstorage
         }
     </script>
 
