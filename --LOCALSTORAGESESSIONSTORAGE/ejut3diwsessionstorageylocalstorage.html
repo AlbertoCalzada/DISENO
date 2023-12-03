@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<title>Document</title>
+
+		<style>
+
+			body{
+				background: #CBC4C4;
+			}
+
+			#caja{
+				padding: 10px;
+			}
+
+		</style>
+
+		<script>
+
+
+			// PARA LOCALSTORAGE
+			function guardarenlocal(){
+				var texto = document.getElementById('textete').value;
+				localStorage.textete=texto;				
+				document.getElementById("salida").innerHTML='Guardado en localStorage';
+			}
+
+			function borrarenlocal(){
+				if (localStorage.textete!=undefined){
+					localStorage.removeItem('textete');
+					document.getElementById("salida").innerHTML='Borrado en localStorage';
+					// borrar todo
+					//localStorage.clear();
+				}else{
+					document.getElementById("salida").innerHTML='No existe';
+				}
+			}
+
+
+			// PARA SESSIONSTORAGE
+			function guardarensession(){
+				var texto = document.getElementById('textete').value;
+				// para ver si esta permitida
+				if(typeof(Storage) !== "undefined") {
+					sessionStorage.textete = texto;
+					document.getElementById("salida").innerHTML='Guardado en sessionStorage';
+				}else{
+					document.getElementById("salida").innerHTML='sessionStorage no soportado';
+				}
+			}
+
+			function borrarensession(){
+				if (typeof(Storage) !== "undefined"){
+					sessionStorage.removeItem('textete');
+					// borrado de todo
+					//sessionStorage.clear();
+					document.getElementById("salida").innerHTML='Borrado en sessionStorage';				
+				}else{
+					document.getElementById("salida").innerHTML='sessionStorage no soportado';
+				}			
+			}
+
+			// para ver lo almacenado
+
+			function veralmacen(){				
+				var textofinal = "En localStorage: "+localStorage.textete+" // En sessionStorage: "+sessionStorage.textete;				
+				document.getElementById("salida").innerHTML=textofinal;
+			}
+
+
+		</script>
+
+	</head>
+	<body>
+
+		<h1>Guardado en localStorage</h1>
+
+		<h3 id="salida"></h3>
+
+		
+		<table>
+				
+			<tr><td><textarea id="textete" cols="30" rows="10"></textarea></td></tr>
+			<tr><td><input type="submit" onclick="guardarenlocal();" value="Guardar en localStorage"></td></tr>
+			<tr><td><input type="submit" onclick="borrarenlocal();" value="Borrar en localStorage"></td></tr>
+			<tr><td><input type="submit" onclick="guardarensession();" value="Guardar en sessionStorage"></td></tr>
+			<tr><td><input type="submit" onclick="borrarensession();" value="Borrar en sessionStorage"></td></tr>
+			<tr><td><input type="submit" onclick="veralmacen();" value="Ver almacen"></td></tr>
+
+		</table>
+
+
+		
+
+		
+	</body>
+</html>

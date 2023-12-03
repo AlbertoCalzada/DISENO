@@ -1,0 +1,59 @@
+body{
+    display: grid;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+header a{
+    margin-left: 65%;
+    margin-top: 3%;
+}
+
+main{
+    margin-top: 10%;
+}
+
+main .chat{
+    display: flex;
+    margin-right: 10%;
+    border: solid 1px black;
+}
+
+main .chat .partChat{
+    margin-left: 10%;
+    width: 300px;
+}
+
+main .send{
+    margin-top: 5%;
+}
+
+main .send input[type=text]{
+    width: 527px;
+    height: 20px;
+    border: solid 2px #6c6a6a;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 1%;
+}
+
+main .send input[type=text]:hover{
+    border-color: #0dd6ff;
+}
+
+main .send .bsend{
+    width: 50px;
+    height: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    right: 70px;
+}

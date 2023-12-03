@@ -1,0 +1,57 @@
+/* ejemplos keyframes animation*/
+
+#ejemplo {
+    /* Establece la duración de la animación en 1 segundo */
+    animation-duration: 1s;
+
+    /* Sobrescribe la duración anterior, ahora la animación dura 0.1 segundos */
+    animation-duration: 0.1s;
+
+    /* Sobrescribe nuevamente, ahora la duración es de 1.7 milisegundos */
+    animation-duration: 1.7ms;
+
+    /* Establece el número de veces que la animación se repetirá (iteración) a 5 veces */
+    animation-iteration-count: 5;
+
+    /* Sobrescribe la iteración anterior, ahora la animación se repetirá infinitamente */
+    animation-iteration-count: infinite;
+
+    /* Establece la dirección de la animación como normal (de principio a fin) */
+    animation-direction: normal;
+
+    /* Sobrescribe la dirección anterior, ahora la animación se ejecutará en direcciones alternas */
+    animation-direction: alternate;
+
+    /* Establece la función de temporización de la animación como lineal */
+    animation-timing-function: linear;
+
+    /* Sobrescribe la función de temporización anterior, ahora utiliza ease-in */
+    animation-timing-function: ease-in;
+
+    /* Sobrescribe nuevamente, ahora la función de temporización es ease-in-out */
+    animation-timing-function: ease-in-out;
+
+    /* Sobrescribe con una función de temporización personalizada usando cubic-bezier */
+    animation-timing-function: cubic-bezier(0.4, 0.8, 1.0, 0.1);
+
+    /* Establece cómo se deben aplicar los estilos al elemento al final de la animación */
+    animation-fill-mode: forwards;
+
+    /* Sobrescribe el modo de llenado anterior, ahora se aplican los estilos al inicio de la animación */
+    animation-fill-mode: backwards;
+
+    /* Sobrescribe nuevamente, ahora se aplican los estilos tanto al inicio como al final de la animación */
+    animation-fill-mode: both;
+
+    /* Sobrescribe con la opción de no aplicar ningún estilo especial al finalizar la animación */
+    animation-fill-mode: none;
+
+    /* Establece un retraso de 2.5 segundos antes de que la animación comience */
+    animation-delay: 2.5s;
+
+    /* Establece el estado de reproducción de la animación como pausado */
+    animation-play-state: paused;
+
+    /* Sobrescribe el estado de reproducción anterior, ahora la animación está en ejecución */
+    animation-play-state: running;
+}

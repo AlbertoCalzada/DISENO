@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- saved from url=(0154)file:///I:/aCURSO-2015-2016/a-Modulo--DISE%C3%91OINTERFACESWEB/DAWDIW/Pruebas/PRUEBAS2016DIWCURSOTUTORIAL/EXAMENESPRUEBASDIW/www.html6.es/t19_storage.html -->
+<html><!-- Mirrored from www.html6.es/t19_storage.html by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 18 Nov 2015 00:03:38 GMT --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Storage</title>
+	<link rel="stylesheet" href="./Storage_files/estilo2.css" type="text/css">
+		
+	<style type="text/css">
+		#dos_cuadros{
+			width:100%;
+			height:136px;
+		}
+		#uno{
+			width:140px;
+			float:left;
+			margin-bottom:25px;
+			padding-top:15px;
+		}
+		#dos{
+			position:relative;
+			left:20px;
+		}
+		#leido{
+			background-color:white;
+			border:1px solid darkgrey;
+			width:324px;
+			padding:2px,0px,2px,1px;
+			margin-left:3px;
+			margin-top:5px;
+		}
+		#dato{
+			font-size:16px;
+			color:#1162ac;
+			padding:5px;
+			border-radius:4px;
+		}
+		#ejemplo1, #vacio99{
+			width:460px;
+			background-color:#C4D0DC;
+			border-radius:12px;
+			padding:20px 0px 29px 43px;
+		}
+		#vacio99{
+			font-size:20px;
+		}
+		#ejemplo1{
+			margin:0 auto;
+		}
+		#saludo99{
+			font-size:12px;
+			font-family:OpenSans;
+			padding-left:98px;
+		}
+		#ampliacion{
+			clear:both;
+			margin:13px auto 45px auto;
+			width:500px;
+			font-size:13px;
+		}
+		body{
+			background-position:0px -42px;
+		}
+	</style>
+	<script async="" src="./Storage_files/analytics.js"></script><script src="./Storage_files/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript">
+		var x=$("document");
+		x.ready(inicio);
+		
+		function inicio(){
+			var f = new Date();
+			var v="t19_storage - "+localStorage.usuario_mooc+" > "+(f.getDate() + "/" + (f.getMonth() +1)) + " a las "+f.getHours()+":"+f.getMinutes()+":"+f.getSeconds();
+			$.get("registro_entrada.html",{dato:v});
+			var x=$("#boton");
+			x.click(f_clic);
+			var xx=$("#boton2");
+			xx.click(borrar);
+			var d=localStorage.pruebal3;
+			x=$("#leido");
+			var x1=$("#prefijo");
+			if (d==undefined){
+				x1.text("¡Vaya!, no sé cómo te llamas");
+				x.text("Escribe debajo tu nombre");
+			} else {
+				x1.text("¡Ey!, ya te conozco..");
+				x.text("Hola "+d);
+				var x2=$("#dato");
+				x2.attr("placeholder","Por si quieres cambiar tu nombre, "+d);
+			}var x4=$("#saludo99");
+			if (localStorage.contadorStorage==undefined){
+			localStorage.contadorStorage=1;
+			x4.text("Bienvenido/a, es la primera vez que has accedido a esta página")
+			} else {
+			localStorage.contadorStorage=Number(localStorage.contadorStorage)+1;
+			x4.text("(Has accedido a esta página: "+localStorage.contadorStorage+" veces.)")
+			}
+			 var x3=$("#vacio99");
+			 x3.text("Visitas: "+localStorage.contadorStorage+" veces.")			 
+		}		
+		function f_clic(){
+			var x=$("#dato");
+			var p=x.attr("value");
+			alert("Encantado de conocerte "+ p+ ". He guardado tu nombre. Recarga la página para comprobarlo.");
+			localStorage.pruebal3=p;
+		}
+		function borrar(){
+			localStorage.clear();
+		}
+	</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-49517545-1', 'edutopia.es');
+  ga('send', 'pageview');
+</script>
+</head>
+
+<body>
+<div id="franja_superior">
+</div>
+
+<header>
+	<div id="logos_cortados1"><img src="./Storage_files/logos_cortados1.png"></div>
+	<div id="cabecera">
+		Grabación de datos en local en HTML5<br>
+		<span style="font-size:26px; color:#CADBEE">Profesor: Javier López</span>
+	</div>
+		<div id="volver">
+			<a href="file:///I:/aCURSO-2015-2016/a-Modulo--DISE%C3%91OINTERFACESWEB/DAWDIW/Pruebas/PRUEBAS2016DIWCURSOTUTORIAL/EXAMENESPRUEBASDIW/www.html6.es/modulos.html">Volver</a>
+	  	</div>
+</header>
+
+<div id="indice">
+<div id="titulo_indice_contenido"><img src="./Storage_files/indice_cortado.png" width="100px"></div>
+<div id="lista">
+	<img src="./Storage_files/flecha_derecha.png" align="center">
+	<a id="p1" href="file:///I:/aCURSO-2015-2016/a-Modulo--DISE%C3%91OINTERFACESWEB/DAWDIW/Pruebas/PRUEBAS2016DIWCURSOTUTORIAL/EXAMENESPRUEBASDIW/www.html6.es/t19_storage.html#punto3">Ejemplo práctico de lo que és Storage</a><br>
+
+	<img src="./Storage_files/flecha_derecha.png" align="center">
+	<a id="p1" href="file:///I:/aCURSO-2015-2016/a-Modulo--DISE%C3%91OINTERFACESWEB/DAWDIW/Pruebas/PRUEBAS2016DIWCURSOTUTORIAL/EXAMENESPRUEBASDIW/www.html6.es/t19_storage.html#punto1">Tipos de datos guardados</a><br>
+
+	<img src="./Storage_files/flecha_derecha.png" align="center">
+	<a id="p1" href="file:///I:/aCURSO-2015-2016/a-Modulo--DISE%C3%91OINTERFACESWEB/DAWDIW/Pruebas/PRUEBAS2016DIWCURSOTUTORIAL/EXAMENESPRUEBASDIW/www.html6.es/t19_storage.html#punto2">Las palabras mágicas</a><br>
+
+	<img src="./Storage_files/flecha_derecha.png" align="center">
+	<a id="p1" href="file:///I:/aCURSO-2015-2016/a-Modulo--DISE%C3%91OINTERFACESWEB/DAWDIW/Pruebas/PRUEBAS2016DIWCURSOTUTORIAL/EXAMENESPRUEBASDIW/www.html6.es/t19_storage.html#punto4">Ejemplo práctico paso a paso</a><br>
+</div>	
+</div>
+
+<section id="contingut">
+<p id="punto3"></p>
+<div id="titulillo">
+<span style="color:#CCC2A0;font-size:28px">• </span>Ejemplo práctico de lo qué es Storage
+</div>
+Para hacernos una idea más rápidamente de qué es y de las posibilidades de <b>Storage</b> vamos a empezar el tema con un ejemplo práctico.<p>
+Si esta es la primera vez que accedes a esta página y no has rellenado antes el formulario siguiente (como no habrá información guardada al respecto) en el siguiente cuadro el navegador te pedirá tu nombre ya que no lo sabe . Si escribes tu nombre y pulsas en el botón '<b>Guardar</b>', las siguientes veces que accedas a esta página el navegador ya sabrá tu nombre y automáticamente te saludará por él (o al menos por el texto que escribiste -todavía no hay manera de saber si lo que escribiste es tu nombre real-).</p><p>
+<b>¡Pruébalo!</b>, escribe tu nombre en el segundo campo de texto, pulsa el botón "Guardar" y recarga la página.<br><br>
+
+
+</p><div id="ejemplo1">
+<span id="prefijo">¡Vaya!, no sé cómo te llamas</span><div id="leido">Escribe debajo tu nombre</div><br>
+<input type="text" id="dato" size="39" placeholder="Escribe tu nombre y pulsa el botón">
+<input type="button" id="boton" value="Guardar">
+</div>
+
+<div id="ampliacion">
+<div id="titulo_peque">Segunda oportunidad..</div>
+Si deseas borrar todos los datos localStorage (para probar esta página como si fuera la primera vez), pulsa el siguiente botón y luego <b>recarga la página</b>:
+<input type="button" id="boton2" value="Borrar todos los datos guardados">
+</div>
+
+
+Este ejemplo sólo nos sirve para ver <b>Storage</b> en funcionamiento, pero no para desarrollarlo paso a paso, ya que no sería positivo empezar con el ojo morado (color <b>#BB04A0</b>). Para la parte práctica tenemos otro ejemplo bastante más sencillo. Antes de eso, nos queda por conocer un poco de información previa y las pálabras mágicas para luego -acompañados con la barita- ver qué sale de la chistera.<p>
+
+
+
+
+
+
+
+</p><p id="punto1"></p>
+<div id="titulillo">
+<span style="color:#CCC2A0;font-size:28px">• </span>Tipos de datos guardados
+</div>
+Como hemos visto con el ejemplo anterior, con HTML5 ya es posible <b>guardar datos</b> en el ordenador del usuario sin limitación de tiempo, sin que estos datos se borren en cada sesión, con una limitación de tamaño de 5 Mb, sin tener que disponer de ningún servidor, ni base de datos y sin tener que utilizar cookies.<br><br>
+Existen dos tipos de almacenamiento (de corta y larga duración):<br>
+<ul>
+<li><b>sessionStorage</b>: Los datos guardados permanecen mientras el usuario tiene el navegador abierto. Al cerrar el navegador los datos se borran automáticamente.</li>
+<li><b>localStorage</b>: Los datos guardados permanecen siempre, incluso si se cierra el navegador y se apaga el ordenador.</li><br>
+</ul>
+
+Es importante señalar que la información guardada es accesible sólo desde el mismo navegador que ha guardado los datos. Es decir, el localStorage de Chrome es diferente al localStorage de Opera o de Firefox. Por lo que se si guardan unos determinados datos desde Chrome, al acceder a la misma página con -por ejemplo- Firefox únicamente se podrán leer los datos guardados desde Firefox, no los generados desde Chrome.<br>
+
+
+
+
+
+<p id="punto2"></p>
+<div id="titulillo">
+<span style="color:#CCC2A0;font-size:28px">• </span>Las palabras mágicas
+</div>
+Aunque la utilización de localStorage es bastante sencilla hay que tener en cuenta que funciona bajo <b>javaScript</b>, por lo que el código correspondiente lo tendremos que colocar dentro del <b>&lt;head&gt;</b>, entre estas dos etiquetas:<br>
+<div id="codigo">
+<pre>&lt;script type="text/javascript"&gt;
+&lt;/script&gt;
+</pre>
+</div>
+
+
+<div id="titulo_peque">Guardar un dato</div>
+Para guardar un valor tenemos que hacer referencia a 3 datos:
+<ul>
+<li>a) <b>localStorage</b> (si los datos serán permanentes) o <b>sessionStorage</b> (si los datos se borrarán cuando el usuario cierre el navegador).
+</li>
+<li>
+b) <b>Un nombre</b> que le daremos a esa información (este valor sólo sirve para poder hacer referencia a ella).
+</li>
+<li>
+c) <b>La información</b> a guardar (normalmente escrita entre comillas).
+</li>
+</ul>
+Por ejemplo:
+<div id="codigo">
+<pre><b>localStorage.nombre</b>='Javier';
+</pre>
+</div>
+Este código <b>guarda permanentemente</b> el dato "Javier" dentro del dato llamado <b>nombre</b>.<br><br>
+
+
+
+<div id="titulo_peque">Recuperar la información</div>
+Para leer o recuperar la información necesitamos también 3 datos:
+<ul>
+<li>a) <b>localStorage</b> (si los datos eran permanentes) o <b>sessionStorage</b> (si los datos tenían sólo vigencia dentro de la presente sesión).
+</li>
+<li>
+b) El <b>nombre</b> que le dimos a esa información cuando se guardó.
+</li>
+<li>
+c) Una <b>variable</b> donde guardar dicha información (o en su defecto un <b>alert</b> que muestre en pantalla dicha información).
+</li>
+</ul>
+Por ejemplo:
+<div id="codigo">
+<pre>alert('La información recuperada ha sido '+ <b>localStorage.nombre</b>);
+</pre>
+</div>
+El '<b>alert</b>' sirve para que aparezca una ventana flotante de alerta con un texto que será 'La información recuperada ha sido ' <b>más</b> la información llamada nombre guardada en localStorage.<br><br>
+
+
+
+<div id="titulo_peque">Eliminar un dato</div>
+Para eliminar únicamente un dato utilizamos la orden '<b>localStorage.removeItem()</b>':
+<div id="codigo">
+<pre><b>localStorage.removeItem</b>('nombre');
+</pre>
+</div>
+En este caso eliminamos los datos (en este ejemplo de carácter permanente) llamados como '<b>nombre</b>'.<br><br>
+
+
+
+<div id="titulo_peque">Eliminar todos los datos existentes</div>
+<div id="codigo">
+<pre>localStorage.clear();
+sessionStorage.clear();
+</pre>
+</div>
+Con este código eliminamos todos los datos, tantos permanentes como los que tienen vigencia dentro de la presente sesión del navegador.<br><br>
+
+
+
+<div id="titulo_peque">Para conocer cuántos datos hay guardados...</div>
+Ya, para rizar el rizo, podemos conocer cuántos elementos (permanentes o no) hay guardados utilizando el atributo '<b>.length</b>'.
+<div id="codigo">
+<pre>alert('Hay ' + localStorage.length + 'elementos guardados');
+</pre>
+</div><br>
+
+
+
+
+
+
+
+
+<p id="punto4"></p>
+<div id="titulillo">
+<span style="color:#CCC2A0;font-size:28px">• </span>Ejemplo práctico paso a paso
+</div>
+Como con sólo conocer por encima el código no hacemos gran cosa, vamos a construir paso a paso el siguiente ejemplo.<p>
+Se trata de un contador que va contando las veces que hemos entrado en esta página con este navegador .<br>(Recarga varias veces la página para comprobar como este contador va incrementándose, incluso si cierras el navegador y lo sigues intentando mañana).<br><br>
+</p><div id="vacio99">Visitas: 1 veces.</div><br>
+
+Dentro del <b>&lt;head&gt;</b>, añadimos el siguiente código:<p>
+
+(Para probarlo, puedes utilizar el útil y a la par sencillo método de <b>copiar</b> y <b>pegar</b> (sin añadir nada más) en un documento vacío con formato .html o bien descarga el fichero comprimido con el ejemplo haciendo clic <a href="file:///I:/aCURSO-2015-2016/a-Modulo--DISE%C3%91OINTERFACESWEB/DAWDIW/Pruebas/PRUEBAS2016DIWCURSOTUTORIAL/EXAMENESPRUEBASDIW/www.html6.es/ejemplo_storage.html">aquí</a>).<br>
+</p><div id="codigo">
+<pre>&lt;script type="text/javascript"&gt;
+   if (localStorage.veces==undefined){
+      localStorage.veces=1;
+   } else {
+      localStorage.veces=Number(localStorage.veces)+1;
+   }
+   document.write("Visitas: "+localStorage.veces+" veces.");
+&lt;/script&gt;
+</pre>
+</div>
+Si tienes conocimientos mínimos de programación es posible que entender este código no sea como leer los poemas homéricos de <a href="http://es.wikipedia.org/wiki/Aristarco_de_Samotracia" target="_blank">Aristarco de Samotracia</a> (siglo II a.C.) <b>en versión original</b>.<br>
+Para el resto de mortales voy a intentar explicarlo línea a línea sin subtítulos y <span style="font-family:font1_negrita;font-size:22px; color:#4E4838">en versión megafácil</span>...<br><br>
+
+
+
+
+<div id="dos_cuadros">
+	<div id="uno">
+		<img src="./Storage_files/dummies.gif" width="120px">
+	</div>
+	<div id="dos">
+Como queremos que la información sea permanente (que no se borre cuando cerremos el navegador) utilizamos siempre '<b>localStorage</b>'.<br><br>
+La información tiene que tener un nombre, así que por no llamarla 'Fulgencia' o 'Remigio', hemos decido llamarla '<b>veces</b>' (ya que lo único que vamos a guardar es un número, que será el número de veces que se ha entrado en la página).<br><br>
+Por lo tanto para acceder (para leer o guardar) esta información en vez de gritar 'Fulgencia' o 'Remigio' lo haremos utilizando el palabro: '<b>localStorage.veces</b>'.
+	</div>
+</div><br><br>
+
+
+Empezemos a despedazar el código línea a línea:<br>
+<span style="font-family:OpenSans;font-size:14px">(Si durante la explicación sientes mareos, pérdida de visión momentánea, vómitos, palpitacions agudas o se te para el corazón de golpe haz una pausa prolongada en la lectura y no lo vuelvas a intentar).</span><br>
+
+<div id="codigo">
+<pre>if (localStorage.veces==undefined){
+</pre>
+</div>
+
+La traducción al castellano actual sería: si este dato tiene un valor no definido (undefined), es decir; si no existe. Deducimos que si no existe quiere decir que es la primera vez que se ha accedido a esta página...
+<div id="codigo">
+<pre>localStorage.veces=1;
+</pre>
+</div>
+Si se cumple la condición anterior escribirá un 1 dentro del dato llamado <b>localStorage.veces</b> (que recordamos que estaba vacío).<br>
+<div id="codigo">
+<pre>} else {
+</pre>
+</div>
+Sino (es decir, si el dato 'NO es undefined', que es lo mismo que decir, si el dato 'tiene algún valor')..
+<div id="codigo">
+<pre>localStorage.veces = Number(localStorage.veces)+ 1;
+</pre>
+</div>
+Entonces le sumará 1 al valor que tenga <b>localStorage.veces</b> en ese momento.<br><br>
+El '<b>Number</b>' que hay enmedio de la línea no es para complicar más aún la lectura (como algunos están pensando). Sirve para que <b>sume</b> 1 y no <b>añada</b> 1, ya que si a 1 se le <b>añade</b> 1 el resultado es <b>11</b> (cosa que no nos interesa), pero si a 1 se le <b>suma</b> 1 el resultado es <b>2</b> (que es lo que queremos que realmente ocurra).<br>
+<div id="codigo">
+<pre>document.write("Visitas: "+localStorage.veces+" veces.");
+</pre>
+</div>
+Finalmente escribe en el documento (osea en la página web) el texto "Visitas: " seguido del dato que ha leído en líneas anteriores y después le añade "veces." para que muestre algo así como "Visitas: 2 veces".<br><br>
+
+Si queremos que esta información esté integrada en un lugar determinado del html y además esté maqueda con CSS3, entonces tendremos que recurrir a javaScript, jQuery o similares.
+</section>
+
+<footer>
+	<div id="texto_footer"><br>© Javier López (2015)<br>
+	<a href="mailto:jab@jabmultimedia.com"> <img src="./Storage_files/email.png" align="center"> jab@jabmultimedia.com</a><br>
+	HTML6.es / JAB Multimedia, S.L.
+	<a href="file:///I:/aCURSO-2015-2016/a-Modulo--DISE%C3%91OINTERFACESWEB/DAWDIW/Pruebas/PRUEBAS2016DIWCURSOTUTORIAL/EXAMENESPRUEBASDIW/www.html6.es/t19_storage.html#"><div id="flecha_azul"><img src="./Storage_files/flecha_fondo.png"></div></a>
+</div>
+
+
+<!-- Mirrored from www.html6.es/t19_storage.html by HTTrack Website Copier/3.x [XR&CO'2013], Wed, 18 Nov 2015 00:03:38 GMT -->
+</footer></body></html>

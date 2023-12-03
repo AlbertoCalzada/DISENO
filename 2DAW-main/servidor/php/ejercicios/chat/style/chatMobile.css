@@ -1,0 +1,56 @@
+body{
+    display: grid;
+    justify-content: center;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+}
+
+header a{
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+main{
+    margin-top: 10%;
+    width: 110%;
+}
+
+main .chat{
+    margin-right: 10%;
+    border: solid 1px black;
+}
+
+main .send{
+    margin-top: 5%;
+}
+
+main .send input[type=text]{
+    width: 353px;
+    height: 20px;
+    border: solid 2px #6c6a6a;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 1%;
+    margin-left: 10px;
+}
+
+main .send input[type=text]:hover{
+    border-color: #0dd6ff;
+}
+
+main .send .bsend{
+    width: 50px;
+    height: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    bottom: 0px;
+    right: 60px;
+}
