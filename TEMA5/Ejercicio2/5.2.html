@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Ejemplos</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Ejercicio 1
+            $("#ocultarTodo").click(function () {
+                $("*").hide();
+            });
+
+            // Ejercicio 2
+            $("#ocultarBoton").click(function () {
+                $(this).hide();
+            });
+
+            // Ejercicio 3
+            $("#ocultarParrafo").click(function () {
+                $(".intro:first").hide();
+            });
+
+            // Ejercicio 4
+            $("#ocultarParrafo2").click(function () {
+                $("p:first").hide();
+            });
+
+            // Ejercicio 5
+            $("#ocultarElementoLista1").click(function () {
+                $("ul:first li:first").hide();
+            });
+
+            // Ejercicio 6
+            $("#ocultarPrimerosElementosLista5").click(function () {
+                $("ul li:first-child").hide();
+            });
+
+            // Ejercicio 7
+            $("#ocultarEnlaces").click(function () {
+                $("a").hide();
+            });
+
+            // Ejercicio 8
+            $("#ocultarEnlaceNuevoVentana").click(function () {
+                $("a[target='_blank']").hide();
+            });
+
+            $("#ocultarEnlaceMismaVentana").click(function () {
+                $("a:not([target='_blank'])").hide();
+            });
+
+            // Ejercicio 9
+            $("#ocultarBotonAlClic").click(function () {
+                $(this).hide();
+            });
+
+            // Ejercicio 10
+            $("table tr:even").css("background-color", "red");
+            $("table tr:odd").css("background-color", "green");
+
+            // Ejercicio 11
+            $("#ocultarParrafoDobleClic").dblclick(function () {
+                $(this).hide();
+            });
+
+            // Ejercicio 12
+            $("#parrafoConAlerta").mousedown(function (event) {
+                if (event.which === 1) { // Botón izquierdo del ratón
+                    alert("Se presionó el botón izquierdo del ratón.");
+                }
+            });
+
+            // Ejercicio 13
+            $("#parrafoConHover").hover(
+                function () {
+                    alert("Entraste al párrafo.");
+                },
+                function () {
+                    alert("Saliste del párrafo.");
+                }
+            );
+
+            // Ejercicio 14
+            $("#cuadroTexto1").focus(function () {
+                $(this).css("border-color", "blue");
+            });
+
+            $("#cuadroTexto1").blur(function () {
+                $(this).css("border-color", "");
+            });
+
+            $("#cuadroTexto2").focus(function () {
+                $(this).css("border-color", "green");
+            });
+
+            $("#cuadroTexto2").blur(function () {
+                $(this).css("border-color", "");
+            });
+
+            // Ejercicio 15
+            $("#esconderDiv1").click(function () {
+                $("#div1").hide();
+            });
+
+            $("#esconderDiv2").click(function () {
+                $("#div2").hide();
+            });
+
+            // Ejercicio 16
+            $("#ocultarParrafoRapido").click(function () {
+                $("p").hide("fast");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <!-- Ejercicio 1 -->
+    <h1>Encabezado</h1>
+    <p class="intro">Primer párrafo</p>
+    <p>Segundo párrafo</p>
+    <button id="ocultarTodo">Ocultar Todo</button>
+
+    <hr>
+
+    <!-- Ejercicio 2 -->
+    <h2>Ejercicio 2</h2>
+    <button id="ocultarBoton">Ocultar Botón</button>
+
+    <hr>
+
+    <!-- Ejercicio 3 -->
+    <h2>Ejercicio 3</h2>
+    <button id="ocultarParrafo">Ocultar Primer Párrafo con Class intro</button>
+
+    <hr>
+
+    <!-- Ejercicio 4 -->
+    <h2>Ejercicio 4</h2>
+    <button id="ocultarParrafo2">Ocultar Primer Párrafo con p:first</button>
+
+    <hr>
+
+    <!-- Ejercicio 5 -->
+    <h2>Ejercicio 5</h2>
+    <ul>
+        <li>Tortilla</li>
+        <li>Jamón</li>
+        <li>Queso</li>
+    </ul>
+    <button id="ocultarElementoLista1">Ocultar Primer Elemento de Lista 1</button>
+
+    <hr>
+
+    <!-- Ejercicio 6 -->
+    <h2>Ejercicio 6</h2>
+    <ul>
+        <li>Tortilla</li>
+        <li>Jamón</li>
+        <li>Queso</li>
+    </ul>
+    <ul>
+        <li>Coca Cola</li>
+        <li>Leche</li>
+        <li>Té</li>
+    </ul>
+    <button id="ocultarPrimerosElementosLista5">Ocultar Primeros Elementos de Todas las Listas</button>
+
+    <hr>
+
+    <!-- Ejercicio 7 -->
+    <h2>Ejercicio 7</h2>
+    <a href="#">Enlace 1</a>
+    <a href="#">Enlace 2</a>
+    <button id="ocultarEnlaces">Ocultar Enlaces</button>
+
+    <hr>
+
+    <!-- Ejercicio 8 -->
+    <h2>Ejercicio 8</h2>
+    <a href="https://www.google.com" target="_blank">Enlace Nueva Ventana</a>
+    <a href="https://www.google.com">Enlace Misma Ventana</a>
+    <button id="ocultarEnlaceNuevoVentana">Ocultar Enlace Nueva Ventana</button>
+    <button id="ocultarEnlaceMismaVentana">Ocultar Enlace Misma Ventana</button>
+
+    <!-- Ejercicio 9 -->
+    <h2>Ejercicio 9</h2>
+    <button id="ocultarBotonAlClic">Ocultar Botón al Clicarlo</button>
+
+    <hr>
+
+    <!-- Ejercicio 10 -->
+    <h2>Ejercicio 10</h2>
+    <table>
+        <tr>
+            <td>Fila 1</td>
+        </tr>
+        <tr>
+            <td>Fila 2</td>
+        </tr>
+        <tr>
+            <td>Fila 3</td>
+        </tr>
+        <tr>
+            <td>Fila 4</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!-- Ejercicio 11 -->
+    <h2>Ejercicio 11</h2>
+    <p id="ocultarParrafoDobleClic">Ocultar Párrafo al Doble Clic</p>
+
+    <hr>
+
+    <!-- Ejercicio 12 -->
+    <h2>Ejercicio 12</h2>
+    <p id="parrafoConAlerta">Presiona el botón izquierdo del ratón sobre este párrafo.</p>
+
+    <hr>
+
+    <!-- Ejercicio 13 -->
+    <h2>Ejercicio 13</h2>
+    <p id="parrafoConHover">Pasa el ratón sobre este párrafo.</p>
+
+    <hr>
+
+    <!-- Ejercicio 14 -->
+    <h2>Ejercicio 14</h2>
+    <input type="text" id="cuadroTexto1" placeholder="Cuadro de Texto 1">
+    <br>
+    <input type="text" id="cuadroTexto2" placeholder="Cuadro de Texto 2">
+
+    <hr>
+
+    <!-- Ejercicio 15 -->
+    <h2>Ejercicio 15</h2>
+    <div id="div1">
+        <p>Contenido del Div 1</p>
+        <button id="esconderDiv1">Esconder Div 1</button>
+    </div>
+
+    <div id="div2">
+        <p>Contenido del Div 2</p>
+        <button id="esconderDiv2">Esconder Div 2</button>
+    </div>
+
+    <!-- Ejercicio 16 -->
+    <h2>Ejercicio 16</h2>
+    <p id="parrafoRapido">Este párrafo se ocultará rápidamente al hacer clic en el botón.</p>
+    <button id="ocultarParrafoRapido">Ocultar Párrafo Rápidamente</button>
+
+</body>
+
+</html>
