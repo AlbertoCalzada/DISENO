@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+}
+
+.logol{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.imagenes {
+    position: relative;
+    background-image: url(../img/top_bg.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 600px; /* Ajusta la altura según sea necesario */
+}
+
+.imagenes::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(170, 214, 250, 0.7); /* Blue overlay with opacity */
+}
+
+.central-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    max-width: 100%; /* Ajusta el ancho máximo según sea necesario */
+    max-height: 100%; /* Ajusta la altura máxima según sea necesario */
+    z-index: 1;
+}
+
+.smaller-image {
+    position: absolute;
+    top: 40%; /* Ajusta el valor según sea necesario */
+    left: 10%;
+    /* Add your smaller image styling properties here */
+    z-index: 2;
+}
+
+.horizontal-line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #aadcfa; /* Thin horizontal blue line */
+}
