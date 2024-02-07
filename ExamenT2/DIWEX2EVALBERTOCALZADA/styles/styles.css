@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url(../assets/fuentes/Poppins-Regular.ttf);
+}
+
+body{
+  font-family: 'Poppins';
+}
+
+
+@keyframes slideRight {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  .logoAnimacion {
+    animation: slideRight 1s ease;
+  }
+  
+  .fondo
+  {
+    background-color: rgb(228, 219, 219);
+  }
+
+  .azul{
+    border-color: blue;
+    color: blue;
+  }
+  
